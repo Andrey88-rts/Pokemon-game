@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import React from 'react';
+
+import Header from './components/Header/Header';
+import Layout from './components/Layout/Layout';
+import Footer from './components/Footer/Footer';
+
+import bg2 from './assets/bg2.jpg';
+import bg3 from './assets/bg3.jpg';
+
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      <Header title="Pokemon" descr="Game!" />
+      <Layout title="Pikachu" descr="Electro" urlBg={bg2} />
+      <Layout title="Pikachu" descr="Electro" colorBg='green' />
+      <Layout title="Pikachu" descr="Electro" urlBg={bg3} />
 
-export default App;
+      <Footer />
+    </>
+  )
+}
