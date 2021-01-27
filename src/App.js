@@ -1,18 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './components/Header/Header';
+import Layout from './components/Layout/Layout';
+import Footer from './components/Footer/Footer';
+import bg3 from './assets/bg3.jpg';
+import bg2 from './assets/bg2.jpg';
 
-function App() {
+
+export default function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello World, ReactJS Marathon!!!
-        </p>
+    <>
+      <Header title="Pokemon" descr="Game!" />
+      <Layout title="Pokemon" descr="Start game!" urlBg={bg3} />
+      <Layout title="Pokemon" descr="Start game!" colorBg='green' />
+      <Layout title="Pokemon" descr="Start game!" urlBg={bg2} />
 
-      </header>
-    </div>
-  );
+      <Footer />
+    </>
+  )
 }
-
-export default App;
