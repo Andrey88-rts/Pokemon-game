@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import styled from "./style.module.css"
-=======
-import styled from './style.module.css';
->>>>>>> main
+import styled from "./style.module.css";
 
 export default function Footer() {
   return (
@@ -13,8 +9,4 @@ export default function Footer() {
       </div>
     </footer>
   )
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> main

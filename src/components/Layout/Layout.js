@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import styled from "./style.module.css"
-=======
-import styled from './style.module.css';
->>>>>>> main
 
-export default function Layout({ id, title, descr, urlBg, colorBg }) {
+export default function Layout({ id, title, urlBg, colorBg, children }) {
   const stylesUrl = {
     backgroundImage: `url(${urlBg})`
   }
@@ -13,8 +9,8 @@ export default function Layout({ id, title, descr, urlBg, colorBg }) {
     backgroundColor: colorBg
   }
 
-<<<<<<< HEAD
-  const stylesRoot = (urlBg !== undefined) ? stylesUrl : stylesColor;
+  const stylesRoot = urlBg ? stylesUrl : stylesColor;
+
 
   return (
     <section className={styled.root} id={id} style={stylesRoot}>
@@ -25,28 +21,10 @@ export default function Layout({ id, title, descr, urlBg, colorBg }) {
             <span className={styled.separator}></span>
           </div>
           <div className={[styled.desc, styled.full].join(' ')}>
-            <p>{descr || "Not descr"}</p>
+            <p>{children}</p>
           </div>
         </article>
       </div>
     </section>
-=======
-  const styleRoot = (urlBg !== undefined) ? stylesUrl : stylesColor;
-
-  return (
-    <section className={styled.root} id={id} style={styleRoot}>
-      <div className={styled.wrapper}>
-        <article>
-          <div className={styled.title}>
-            <h3>{title}</h3>
-            <span className={styled.separator}></span>
-          </div>
-          <div className={[styled.desc, styled.full].join(' ')}>
-            <p>{descr}</p>
-          </div>
-        </article>
-      </div >
-    </section >
->>>>>>> main
   )
 }
