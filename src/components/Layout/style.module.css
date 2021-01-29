@@ -4,6 +4,10 @@
   font-size: 1.4rem;
   position: relative;
   background: #fafafa;
+<<<<<<< HEAD
+=======
+  /* background-image: url('../../assets/bg1.jpg'); */
+>>>>>>> main
   clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%);
   z-index: 5;
   background-attachment: fixed;
