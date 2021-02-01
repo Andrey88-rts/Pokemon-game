@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import cn from 'classnames';
 import styled from './style.module.css';
 import back from './assets/card-back-side.jpg';
 
@@ -7,20 +8,20 @@ export default function PokemonCard({ name, img, id, type, values }) {
   const [isActive, setActive] = useState(false);
 
   const handlerClick = () => {
-    setActive((isActive) => isActive = !isActive); //Toggle function
+    setActive(!isActive); //Toggle function
   }
 
   return (
     <div className={styled.root} onClick={handlerClick}>
-      <div className={`${styled.pokemonCard} ${isActive ? styled.active : ''}`}>
+      <div className={cn(styled.pokemonCard, { [styled.active]: isActive })}>
         <div className={styled.cardFront}>
-          <div className={[styled.wrap, styled.front].join(' ')}>
-            <div className={`${styled.pokemon} ${styled[type]}`}>
+          <div className={cn(styled.wrap, styled.front)}>
+            <div className={cn(styled.pokemon, styled[type])}>
               <div className={styled.values} >
-                <div className={[styled.count, styled.top].join(' ')}>{values.top}</div>
-                <div className={[styled.count, styled.right].join(' ')}>{values.right}</div>
-                <div className={[styled.count, styled.bottom].join(' ')}>{values.bottom}</div>
-                <div className={[styled.count, styled.left].join(' ')}>{values.left}</div>
+                <div className={cn(styled.count, styled.top)}>{values.top}</div>
+                <div className={cn(styled.count, styled.right)}>{values.right}</div>
+                <div className={cn(styled.count, styled.bottom)}>{values.bottom}</div>
+                <div className={cn(styled.count, styled.left)}>{values.left}</div>
               </div>
               <div className={styled.imgContainer}>
                 <img src={img} alt={name} />
@@ -35,7 +36,7 @@ export default function PokemonCard({ name, img, id, type, values }) {
         </div >
 
         <div className={styled.cardBack}>
-          < div className={[styled.wrap, styled.back].join(' ')}>
+          < div className={cn(styled.wrap, styled.back)}>
             <img src={back} alt="Сard Backed" />
           </div >
         </div >
