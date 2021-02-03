@@ -34,7 +34,7 @@ export default function Menu({ isActive, onMenuClose }) {
       < div>
         <ul>
           {MENU.map(({ title, to }, index) => (
-            <li key={index} onClickMenuClose={handlerMenuClose}>
+            <li key={index} onClick={handlerMenuClose}>
               <Link to={to} >
                 {title}
               </Link>

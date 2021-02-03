@@ -1,19 +1,18 @@
-import { useState } from 'react';
+
 import cn from 'classnames';
 import styled from './style.module.css';
 import back from './assets/card-back-side.jpg';
 
-export default function PokemonCard({ name, img, id, type, values }) {
+export default function PokemonCard({ name, img, id, type, values, isActive, onCardClick }) {
 
-  const [isActive, setActive] = useState(false);
+  const handlerCardClick = () => {
+    onCardClick && onCardClick(id);
 
-  const handlerClick = () => {
-    setActive(!isActive); //Toggle function
   }
 
   return (
-    <div className={styled.root} onClick={handlerClick}>
-      <div className={cn(styled.pokemonCard, { [styled.active]: isActive })}>
+    <div className={styled.root} >
+      <div className={cn(styled.pokemonCard, { [styled.active]: isActive })} onClick={handlerCardClick}>
         <div className={styled.cardFront}>
           <div className={cn(styled.wrap, styled.front)}>
             <div className={cn(styled.pokemon, styled[type])}>

@@ -35,3 +35,10 @@
   background-color: transparent;
   cursor: pointer;
 }
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

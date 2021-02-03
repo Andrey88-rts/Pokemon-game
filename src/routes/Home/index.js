@@ -3,11 +3,8 @@ import React from 'react';
 
 import Header from '../../components/Header';
 import Layout from '../../components/Layout';
-import Footer from '../../components/Footer';
-import PokemonCard from '../../components/PokemonCard';
-import MenuHeader from '../../components/MenuHeader';
-import pokemons from '../../services/pokemonJSON';
-import styled from "./style.module.css";
+
+
 
 import bg2 from '../../assets/bg2.jpg';
 import bg3 from '../../assets/bg3.jpg';
@@ -34,19 +31,6 @@ export default function HomePage({ onChangePage }) {
         </p>
       </Layout>
 
-      <Layout title="Cards" colorBg={"lightgreen"}>
-        <div className={styled.flex}>
-          {
-            pokemons.map(item =>
-              <PokemonCard key={item.id}
-                name={item.name}
-                img={item.img}
-                id={item.id}
-                type={item.type}
-                values={item.values} />)
-          }
-        </div>
-      </Layout>
 
       <Layout title="Full rules" descr="Electro" urlBg={bg3}>
         <p>
