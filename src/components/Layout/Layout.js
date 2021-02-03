@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import styled from "./style.module.css"
 
 export default function Layout({ id, title, urlBg, colorBg, children }) {
@@ -20,7 +21,7 @@ export default function Layout({ id, title, urlBg, colorBg, children }) {
             <h3>{title || "Not title"}</h3>
             <span className={styled.separator}></span>
           </div>
-          <div className={[styled.desc, styled.full].join(' ')}>
+          <div className={cn(styled.desc, styled.full)}>
             <p>{children}</p>
           </div>
         </article>

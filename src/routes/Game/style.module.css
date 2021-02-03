@@ -1,0 +1,37 @@
+.grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  font-weight: 900;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.button {
+  display: inline;
+  padding: 20px 30px;
+  text-transform: uppercase;
+  color: #077a0d;
+  background-color: #270d85;
+  border: 1px solid #4219d8;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  outline: none;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.button:hover {
+  background-color: transparent;
+  cursor: pointer;
+}

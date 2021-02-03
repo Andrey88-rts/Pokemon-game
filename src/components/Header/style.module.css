@@ -18,6 +18,7 @@
   z-index: -1;
   animation: stars-move-in 1000ms 300ms forwards;
   opacity: 0;
+  -webkit-animation: stars-move-in 1000ms 300ms forwards;
 }
 
 @keyframes stars-move-in {
@@ -90,4 +91,25 @@
   font-weight: normal;
   color: #fafafa;
   line-height: 32px;
+}
+
+.button {
+  padding: 20px 30px;
+  text-transform: uppercase;
+  color: #077a0d;
+  background-color: #270d85;
+  border: 1px solid #4219d8;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  outline: none;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.button:hover {
+  background-color: transparent;
+  cursor: pointer;
 }
