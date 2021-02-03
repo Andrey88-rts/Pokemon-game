@@ -1,6 +1,7 @@
 
 import styled from './style.module.css';
 
+
 export default function GamePage({ onClickBack }) {
   const handleClick = () => {
     console.log("<GamePage/>");

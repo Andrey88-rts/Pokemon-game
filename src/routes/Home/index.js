@@ -22,7 +22,7 @@ export default function HomePage({ onChangePage }) {
   }
   return (
     <>
-      <MenuHeader />
+
       <Header title="Pokemon" descr="Game!" onClickButton={handleClickButton} />
       <Layout title="Rules" urlBg={bg2}>
 
@@ -59,7 +59,6 @@ export default function HomePage({ onChangePage }) {
         </p>
       </Layout>
 
-      <Footer />
     </>
   )
 }
