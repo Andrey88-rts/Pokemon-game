@@ -1,32 +1,45 @@
 import styled from './style.module.css';
 import cn from 'classnames';
+import { Link } from 'react-router-dom';
 
-export default function Menu({ isActive }) {
+const MENU = [
+  {
+    title: "HOME",
+    to: "/"
+  },
+  {
+    title: "GAME",
+    to: "/game"
+  },
+  {
+    title: "ABOUT",
+    to: "/about"
+  },
+  {
+    title: "CONTACT",
+    to: "/contact"
+  }
+]
+
+export default function Menu({ isActive, onMenuClose }) {
+
+  const handlerMenuClose = () => {
+    console.log("<Link/>");
+    onMenuClose && onMenuClose();
+  }
+
   return (
-    <div className={cn(styled.menuContainer, isActive ? [styled.active] : [styled.deactive])}>
+    <div className={cn(styled.menuContainer, { [styled.active]: isActive === true, [styled.deactive]: isActive === false })}>
       < div className={styled.overlay} />
-      < div className={styled.menuItems}>
+      < div>
         <ul>
-          <li>
-            <a href="#welcome">
-              HOME
-        </a>
-          </li>
-          <li>
-            <a href="#game">
-              GAME
-        </a>
-          </li>
-          <li>
-            <a href="#about">
-              ABOUT
-        </a>
-          </li>
-          <li>
-            <a href="#contact">
-              CONTACT
-        </a>
-          </li>
+          {MENU.map(({ title, to }, index) => (
+            <li key={index} onClick={handlerMenuClose}>
+              <Link to={to} >
+                {title}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div >
     </div >
