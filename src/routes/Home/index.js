@@ -3,23 +3,19 @@ import React from 'react';
 
 import Header from '../../components/Header';
 import Layout from '../../components/Layout';
-
-
-
 import bg2 from '../../assets/bg2.jpg';
 import bg3 from '../../assets/bg3.jpg';
 
 
 
-export default function HomePage({ onChangePage }) {
+export default function HomePage({ onClickBack }) {
 
   const handleClickButton = (page) => {
     console.log('<HomePage/>');
-    onChangePage && onChangePage(page);
+    onClickBack && onClickBack(page);
   }
   return (
     <>
-
       <Header title="Pokemon" descr="Game!" onClickButton={handleClickButton} />
       <Layout title="Rules" urlBg={bg2}>
 
