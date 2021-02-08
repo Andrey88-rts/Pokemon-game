@@ -1,7 +1,7 @@
 import styled from "./style.module.css";
 import { useHistory } from 'react-router-dom';
 
-export default function Header({ title, descr, onClickButton }) {
+export default function Header({ title, descr }) {
   const history = useHistory();
   const handleClick = () => {
     console.log('<Header />');
@@ -16,7 +16,7 @@ export default function Header({ title, descr, onClickButton }) {
       <div className={styled.container}>
         <h1>{title || "Not title"}</h1>
         <p>{descr || "Not descr"}</p>
-        <button className={styled.button} onClick={handleClick}>
+        <button className={styled.btn} onClick={handleClick}>
           Start Game
         </button>
       </div>

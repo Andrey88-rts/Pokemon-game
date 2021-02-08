@@ -1,5 +1,6 @@
 
 import { useRouteMatch, Route, Switch, Redirect } from 'react-router-dom';
+
 import HomePage from './routes/Home';
 import GamePage from './routes/Game';
 import MenuHeader from './components/MenuHeader';
@@ -9,7 +10,6 @@ import styled from './style.module.css';
 import AboutPage from './routes/AboutPage';
 import ContactPage from './routes/ContactPage';
 import NotFound from './routes/NotFound';
-
 
 export default function App() {
   const match = useRouteMatch("/");
